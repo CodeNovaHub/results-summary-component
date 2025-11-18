@@ -1,0 +1,211 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    
+    --light-red-fundo: hsl(0, 100%, 67%, 5%);
+    --orangey-yellow-fundo: hsl(39, 100%, 56%, 5%);
+    --green-teal-fundo: hsl(166, 100%, 37%, 5%);
+    --cobalt-blue-fundo: hsl(234, 85%, 45%, 5%);
+
+    /* ## Gradients */
+
+    --light-slate-blue: hsl(252, 100%, 67%); /* (background) */
+    --light-royal-blue: hsl(241, 81%, 54%); /* (background) */
+
+    --violet-blue: hsla(256, 72%, 46%, 1); /* (circle) */
+    --persian-blue: hsla(241, 72%, 46%, 0); /* (circle) */
+
+    /* ### Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+    
+    --lavender-blue: #E6E6F4;
+    --shadow: #00000025;
+    /* 
+    ### Notes
+
+    ## Typography
+
+    ### Body Copy
+
+    ### Font 
+    */
+    --font-size: 18px; /* (paragraphs) */
+
+    --family: "Hanken Grotesk" ;
+    --weight-regular:500 ;
+    --weight-semibold:700 ;
+    --weight-bold:800 ;
+  /*   (https://fonts.google.com/specimen/Hanken+Grotesk)
+   */
+}
+main {
+    font-family: var(--family);
+    min-width: 20rem;
+    max-width: 27rem;
+    margin: auto;
+}
+section.result {
+    background-image:linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue)); 
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0px 0px 2rem 2rem;
+}
+section.result h1 {
+    font-size:1.2rem ;
+    color: var(--light-lavender);
+}
+/* aqui fica o circulo */
+section.result .pontos {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, var(--violet-blue), var(--persian-blue));
+    width: 8.7rem;
+    height: 8.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    margin-top: 1.8rem;
+}
+.pontos .res {
+    font-size: 3.2rem;
+    color: var(--white);
+    font-weight: var(--weight-bold);
+}
+.pontos .tot {
+    color: var(--light-lavender);
+}
+/* aqui termina o circulo */
+section.result .great {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: var(--weight-semibold);
+}
+section.result p {
+    font-size: var(--family);
+    margin-top: 1rem;
+    color: var(--light-lavender);
+    padding-inline-start:1rem ;
+    padding-inline-end:1rem ;
+}
+/* aqui fica a parte de baixo so section */
+section.sumary {
+    background-color: var(--persian-blue);
+    padding:1.7rem ;
+}
+section.sumary h2 {
+    font-size: 1.2rem;
+    color: var(--dark-gray-blue);
+    margin-bottom: 1rem;
+}
+section.sumary div {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+span.line {
+    color: var(--dark-gray-blue);
+}
+div.reaction {
+    background-color:var(--light-red-fundo) ;
+    color: var(--light-red);
+}
+div.memory {
+    background-color:var(--orangey-yellow-fundo) ;
+    color: var(--orangey-yellow);
+}
+div.verbal {
+    background-color:var(--green-teal-fundo) ;
+    color: var(--green-teal);
+}
+div.visual {
+    background-color:var(--cobalt-blue-fundo) ;
+    color: var(--cobalt-blue);
+}
+span.icons {
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    font-weight: var(--weight-bold);
+}
+section.sumary button {
+    display: block;
+    border-radius: 2rem;
+    padding: 1.2rem;
+    margin-top: 2rem;
+    width: 100%;
+    border: none;
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: var(--weight-semibold);
+}
+section.sumary button:hover {
+    cursor: pointer;
+    background-color: var(--light-royal-blue);
+}
+@media screen and (min-width:48rem) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        min-height: 100vh;
+        background-color: var(--pale-blue);
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row nowrap;
+        height: 30rem;
+        max-width: 43rem;
+        border-radius: 2rem;
+        background-color: var(--white);
+        box-shadow: 0rem 0rem 1rem var(--shadow);
+    }
+    section.result .pontos {
+        width: 11rem;
+        height: 11rem;
+    }
+    .pontos .res {
+        font-size: 4rem;
+    }
+    .pontos .tot {
+        font-size: 1rem;
+    }
+    section.result {
+        border-radius: 2rem;
+        width: 50%;
+        height: 100%;
+    }
+    section.sumary {
+        width: 50%;
+        height: 100%;
+        background: none;
+        padding: 2rem;
+    }
+}
